@@ -11,24 +11,27 @@
 	flex-direction: column;
 	gap: 4px;
 	flex-wrap: wrap;
-	height: 555px;
+	height: 800px;
 	background-color: beige;
 }
 
 .item {
-	width: calc((100% - 30px) / 5);
+	width: calc((100% - 32px) / 5);
 }
 
-.item:nth-child(4n + 1) {
+.item:nth-child(5n + 1) {
 	background-color: yellowgreen;
 }
-.item:nth-child(4n + 2) {
+.item:nth-child(5n + 2) {
 	background-color: blue;
 }
-.item:nth-child(4n + 3) {
+.item:nth-child(5n + 3) {
 	background-color: aqua;
 }
-.item:nth-child(4n) {
+.item:nth-child(5n + 4) {
+	background-color: violet;
+}
+.item:nth-child(5n) {
 	background-color: gray;
 }
 
@@ -53,11 +56,19 @@
 	order: 5;
 }
 
-.items::before,
+/* For 3 columns */
+
+/* .items::before,
 .items::after {
 	content: '';
 	flex-basis: 100%;
 	width: 2px;
 	order: 2;
 	background-color: blueviolet;
+} */
+.item.break {
+	flex-basis: 100%;
+	width: 0;
+	padding: 0;
+	border: none;
 }
